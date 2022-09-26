@@ -797,20 +797,20 @@ function fade(node, { delay = 0, duration = 400, easing = identity } = {}) {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[13] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[13] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
 // (5:6) {#each site_nav as {link}}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[13].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -828,7 +828,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[13].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
 			attr(a, "class", "link svelte-1z0hpmb");
 		},
 		m(target, anchor) {
@@ -836,9 +836,9 @@ function create_each_block_1(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 1 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 1 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
+			if (dirty & /*site_nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -965,7 +965,7 @@ function create_if_block(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler_1*/ ctx[11]);
+				dispose = listen(button, "click", /*click_handler_1*/ ctx[9]);
 				mounted = true;
 			}
 		},
@@ -1023,7 +1023,7 @@ function create_if_block(ctx) {
 // (26:6) {#each site_nav as {link}}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[13].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -1041,7 +1041,7 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[13].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
 			attr(a, "class", "link svelte-1z0hpmb");
 		},
 		m(target, anchor) {
@@ -1049,9 +1049,9 @@ function create_each_block(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 1 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 1 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
+			if (dirty & /*site_nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -1198,7 +1198,7 @@ function create_fragment(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler*/ ctx[10]);
+				dispose = listen(button, "click", /*click_handler*/ ctx[8]);
 				mounted = true;
 			}
 		},
@@ -1275,9 +1275,7 @@ function instance($$self, $$props, $$invalidate) {
 	let { name } = $$props;
 	let { theme } = $$props;
 	let { variation } = $$props;
-	let { afaaz } = $$props;
-	let { optkq } = $$props;
-	let { qbukb } = $$props;
+	let { uojzq } = $$props;
 	let mobileNavOpen = false;
 
 	const click_handler = () => $$invalidate(2, mobileNavOpen = true);
@@ -1290,9 +1288,7 @@ function instance($$self, $$props, $$invalidate) {
 		if ('name' in $$props) $$invalidate(1, name = $$props.name);
 		if ('theme' in $$props) $$invalidate(5, theme = $$props.theme);
 		if ('variation' in $$props) $$invalidate(6, variation = $$props.variation);
-		if ('afaaz' in $$props) $$invalidate(7, afaaz = $$props.afaaz);
-		if ('optkq' in $$props) $$invalidate(8, optkq = $$props.optkq);
-		if ('qbukb' in $$props) $$invalidate(9, qbukb = $$props.qbukb);
+		if ('uojzq' in $$props) $$invalidate(7, uojzq = $$props.uojzq);
 	};
 
 	return [
@@ -1303,9 +1299,7 @@ function instance($$self, $$props, $$invalidate) {
 		logo,
 		theme,
 		variation,
-		afaaz,
-		optkq,
-		qbukb,
+		uojzq,
 		click_handler,
 		click_handler_1
 	];
@@ -1322,9 +1316,7 @@ class Component extends SvelteComponent {
 			name: 1,
 			theme: 5,
 			variation: 6,
-			afaaz: 7,
-			optkq: 8,
-			qbukb: 9
+			uojzq: 7
 		});
 	}
 }
